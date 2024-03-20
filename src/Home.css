@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'Lato Regular';
+  src: local('Lato Regular'), url(./assets/fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Medium';
+  src: local('Lato Medium'), url(./assets/fonts/Lato-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Italic';
+  src: local('Lato Italic'), url(./assets/fonts/Lato-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: local('Lato Bold'), url(./assets/fonts/Lato-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Semibold';
+  src: local('Lato Semibold'), url(./assets/fonts/Lato-Semibold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Black';
+  src: local('Lato Black'), url(./assets/fonts/Lato-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  src: local('Lato Light'), url(./assets/fonts/Lato-Light.ttf) format('truetype');
+}
+
+
+.herobanner-title {
+  font-family: Lato Regular;
+}
+
+.map-title {
+  font-family: Lato SemiBold;
+  font-size: 32px;
+  color: #fff;
+}
+
+.map-subtitle {
+  font-family: Lato Light;
+  color: #C1C1C1;
+  font-size: 16px;
+}
+
+.uni-li-hover {
+  transition: 0.2s;
+}
+
+.uni-li-hover:hover {
+  background-color: #ffffff49 !important;
+  cursor: pointer;
+}
+
+.mainheader-btn {
+  transition: 0.4s;
+}
+
+.mainheader-btn:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.map-section {
+  background: linear-gradient(23deg, #3736365c 0%, rgb(47, 43, 43) 100%);
+  padding: 80px 30px
+}
+
+.control-panel {
+  background-color: #1e1d1d;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 30px 40px;
+}
+
+.section {
+  padding: 80px 30px;
+}
+
+.contact-title {
+  font-size: 24px;
+  color: #fff;
+  font-family: Lato Semibold;
+  text-align: center;
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  color: #fff;
+  font-family: Lato Light;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.divider {
+  margin: 0 !important;
+  border-color: #fff !important;
+  border-width: 2px;
+  opacity: 1 !important;
+  width: 150px;
+}
+
+.contact-col {
+  padding: 20px;
+  border: 1px solid #fff
+}
+
+.form {
+  padding: 20px 30px 0 30px;
+  width: 100%;
+}
+
+.contact-input { 
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid #fff !important;
+  border: none;
+  font-family: Lato Regular;
+  color: #fff;
+  padding-left: 7px;
+  margin-bottom: 15px;
+}
+
+.contact-input:focus {
+  border: none;
+  border-bottom: 1px solid #fff !important;
+  outline: 0;
+}
+
+.contact-submit:hover {
+  background-color: #434141 !important;
+  color: #fff
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px; 
+  padding-bottom: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-box {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+.privacy-policy {color: #999999; font-family: Lato Regular; margin: 0 15px;}
+.author {font-family: 'Courier New', Courier, monospace; color: #9a9a9a; font-family: Lato Regular;}
+.policy-link {text-decoration: none; color: #cacaca; transition: 0.3s; font-family: Lato Regular}
+.policy-link:hover {color: #fff;}
+
+@media only screen and (max-width: 576px) {
+  .mainheader {
+    background-color: #000;
+    z-index: 100;
+  }
+  
+  .footer-box {
+    display: block !important;
+  }
+
+  .herobanner-logo {
+    width: 225px;
+    margin-bottom: 10px;
+  }
+
+  .herobanner-title {
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .mb-2 {
+    margin-bottom: 20px !important;
+  }
+
+  .map-section {
+    padding: 40px 15px;
+
+  }
+
+  .map-title {
+    font-size: 28px;
+  
+  }
+  
+  .title-box {
+    align-items: flex-start !important;
+  }
+
+  .map-subtitle {
+    font-size: 16px !important;
+    font-family: Lato Light;
+  }
+
+  .control-panel {
+    border-radius: 4px;
+    padding: 20px 20px;
+  }
+  
+  .section {
+    padding: 40px 15px;
+  }
+
+  .contact-col {
+    border: none !important;
+  }
+}

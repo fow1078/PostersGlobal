@@ -1,0 +1,22 @@
+input:focus {outline: 0; }
+
+.home-footer {width: 100%; position: relative;}
+
+body {
+  background-color: #181818;
+}
+
+.footer {padding-top: 20px; padding-bottom: 20px;}
+.privacy-policy {color: #999999; font-family: Lato Regular; margin: 0 15px;}
+.author {font-family: Lato Regular; color: #9a9a9a; }
+.policy-link {text-decoration: none; color: #cacaca; transition: 0.3s; font-family: Lato Regular}
+.policy-link:hover {color: #fff;}
+
+
+/* Privacy Policy */
+.privacy-policy-body {background-color: #171717;}
+.privacy-policy-header {background-color: #000 !important; position: sticky !important;}
+.main-title {font-family: Lato Bold; text-transform: uppercase; color: #fff}
+.privacy-subtitle {font-family: Lato Regular; color: #fff}
+.privacy-category-subtitle {font-family: Lato Italic; color: #fff}
+.privacy-policy-paragraph {font-family: Lato Regular; color: #c9c9c9}
