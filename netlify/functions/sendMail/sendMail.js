@@ -22,7 +22,7 @@ exports.handler = async (event, context) => {
 
   const data = new URLSearchParams({
     'apikey': API_KEY,
-    'subject': subject,
+    'subject': 'subject',
     'from': SENDER_EMAIL,
     'to': 'cristarium11@gmail.com',
     'bodyHtml': 'test',
