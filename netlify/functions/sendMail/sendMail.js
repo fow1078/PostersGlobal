@@ -16,6 +16,8 @@
 
 // module.exports = { handler }
 
+const mailgun = require("axios");
+
 exports.handler = async (event, context) => {
   const API_KEY = '787934F3EDA1952BCC3D49463EF7287CD75E6EC60CC65446E199D36826028F6A6E7FE2816431DC4452BCEF990C6B084F'; // Replace with your API key
   const SENDER_EMAIL = 'fow1078@gmail.com'; // This email must be verified with Elastic Email
