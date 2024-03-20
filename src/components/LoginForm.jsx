@@ -16,7 +16,7 @@ function LoginForm() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (username === process.env.REACT_APP_ADMIN_LOGIN && password === process.env.REACT_APP_ADMIN_PASSWORD) {
+    if (username === process.env.VITE_ADMIN_LOGIN && password === process.env.VITE_ADMIN_PASSWORD) {
       const expirationTime = new Date().getTime() + 30 * 60 * 1000;
       localStorage.setItem('isAuthenticated', 'true');
       localStorage.setItem('sessionExpiration', expirationTime.toString());

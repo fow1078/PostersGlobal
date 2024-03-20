@@ -1,7 +1,5 @@
 import React from 'react'
 import { MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
-
-// import { apikey } from '../../apikey'
 import { sendEmail } from '../../common/sendEmail'
 
 function ContactForm() {
