@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 exports.handler = async (event, context) => {
-  const API_KEY = '787934F3EDA1952BCC3D49463EF7287CD75E6EC60CC65446E199D36826028F6A6E7FE2816431DC4452BCEF990C6B084F';
+  const API_KEY = process.env.MAIL_API_KEY;
 
   const SENDER_EMAIL = 'fow1078@gmail.com'; 
   const mail = JSON.parse(event.body);

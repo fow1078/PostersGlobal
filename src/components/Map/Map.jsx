@@ -13,7 +13,7 @@ function MapA({ pins, refer, popupInfo, setPopupInfo }) {
     <>
       <Map
         ref={refer}
-        mapboxAccessToken="pk.eyJ1Ijoia2t3b3JrIiwiYSI6ImNsdGZucnJnMjBhcTMyanBuaGxpMWdxZGUifQ.FWTmvhPBxzkXAibuT4k_CQ"
+        mapboxAccessToken={process.env.REACT_APP_MAP_API_KEY}
         initialViewState={{
           latitude: 40,
           longitude: -100,
