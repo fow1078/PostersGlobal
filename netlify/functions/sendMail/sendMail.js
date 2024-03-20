@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
     'apikey': API_KEY,
     'subject': 'subject',
     'from': SENDER_EMAIL,
-    'to': 'cristarium11@gmail.com',
+    'to': 'fow1078@gmail.com',
     'bodyHtml': 'test',
     'isTransactional': true
   });
