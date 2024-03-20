@@ -8,7 +8,6 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e.target[0].value)
     sendEmail()
   }
 
