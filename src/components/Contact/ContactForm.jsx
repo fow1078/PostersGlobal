@@ -8,7 +8,13 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    sendEmail()
+    const emailData = {
+      name: e.target[0],
+      email: e.target[1],
+      subject: e.target[2],
+      message: e.target[3]
+    }
+    sendEmail(emailData)
   }
 
   return (

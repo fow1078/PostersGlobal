@@ -1,33 +1,31 @@
-// // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
-// const handler = async (event) => {
-//   try {
-//     const subject = event.queryStringParameters.name || 'World'
-//     return {
-//       statusCode: 200,
-//       body: JSON.stringify({ message: `Hello ${subject}` }),
-//       // // more keys you can return:
-//       // headers: { "headerName": "headerValue", ... },
-//       // isBase64Encoded: true,
-//     }
-//   } catch (error) {
-//     return { statusCode: 500, body: error.toString() }
-//   }
-// }
-
-// module.exports = { handler }
-
 const axios = require("axios");
 
 exports.handler = async (event, context) => {
-  const API_KEY = '787934F3EDA1952BCC3D49463EF7287CD75E6EC60CC65446E199D36826028F6A6E7FE2816431DC4452BCEF990C6B084F'; // Replace with your API key
-  const SENDER_EMAIL = 'fow1078@gmail.com'; // This email must be verified with Elastic Email
+  const API_KEY = '787934F3EDA1952BCC3D49463EF7287CD75E6EC60CC65446E199D36826028F6A6E7FE2816431DC4452BCEF990C6B084F';
+
+  const SENDER_EMAIL = 'fow1078@gmail.com'; 
+  const mail = JSON.parse(event.body);
 
   const data = new URLSearchParams({
     'apikey': API_KEY,
     'subject': 'subject',
     'from': SENDER_EMAIL,
-    'to': 'fow1078@gmail.com',
-    'bodyHtml': 'test',
+    'to': mail.email,
+    'bodyHtml': `
+        <div style="text-align: center; padding: 10px; border-bottom: 1px solid #eee;">
+            <h2>Support Request</h2>
+        </div>
+        <div style="padding: 20px 0;">
+            <p><strong>From:</strong> ${mail.name}</p>
+            <p><strong>Email:</strong> ${mail.email}</p>
+            <p><strong>Subject:</strong> ${mail.subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${mail.message}</p>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #eee; padding: 10px; font-size: 12px; color: #666;">
+            This is an automated message sent from the Contact Us form. Please do not reply directly to this email.
+        </div>
+    `,
     'isTransactional': true
   });
 
