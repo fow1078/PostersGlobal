@@ -9,10 +9,10 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const emailData = {
-      name: e.target[0],
-      email: e.target[1],
-      subject: e.target[2],
-      message: e.target[3]
+      name: e.target[0].value,
+      email: e.target[1].value,
+      subject: e.target[2].value,
+      message: e.target[3].value
     }
     sendEmail(emailData)
   }
