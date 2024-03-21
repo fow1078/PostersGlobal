@@ -40,7 +40,7 @@ function ContactForm() {
         <h2 className='contact-title'>Don't see your school?</h2>
         <p className='contact-subtitle'>Send us a message to tell us about your organization and the Posters team will reach out!</p>
         <hr className='divider' />
-        <form className='form' onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit} autoComplete='off'>
           <MDBRow>
             <MDBCol xs={12} lg={6}>
               <input className='contact-input' type='text' placeholder='NAME' />
