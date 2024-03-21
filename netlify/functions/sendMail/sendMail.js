@@ -3,14 +3,14 @@ const axios = require("axios");
 exports.handler = async (event, context) => {
   const API_KEY = process.env.MAIL_API_KEY;
 
-  const SENDER_EMAIL = 'fow1078@gmail.com'; 
+  const SENDER_EMAIL = 'contact@postersglobal.com'; 
   const mail = JSON.parse(event.body);
 
   const data = new URLSearchParams({
     'apikey': API_KEY,
     'subject': 'subject',
     'from': SENDER_EMAIL,
-    'to': 'contact@postersglobal.com',
+    'to': 'fow1078@gmail.com',
     'bodyHtml': `
         <div style="text-align: center; padding: 10px; border-bottom: 1px solid #eee;">
             <h2>Support Request</h2>
