@@ -61,6 +61,7 @@
 
 .mainheader-btn {
   transition: 0.4s;
+  z-index: 1000;
 }
 
 .mainheader-btn:hover {

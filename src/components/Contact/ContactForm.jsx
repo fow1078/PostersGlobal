@@ -1,6 +1,8 @@
 import React from 'react'
 import { MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
 import { sendEmail } from '../../common/sendEmail'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 function ContactForm() {
 
@@ -13,28 +15,48 @@ function ContactForm() {
       message: e.target[3].value
     }
     sendEmail(emailData)
+
+    e.target[0].value = ""
+    e.target[1].value = ""
+    e.target[2].value = ""
+    e.target[3].value = ""
+
+    toast.success('🦄 Wow so easy!', {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Flip,
+      });
   }
 
   return (
-    <div className='contact-form'>
-      <h2 className='contact-title'>Don't see your school?</h2>
-      <p className='contact-subtitle'>Send us a message to tell us about your organization and the Posters team will reach out!</p>
-      <hr className='divider' />
-      <form className='form' onSubmit={handleSubmit}>
-        <MDBRow>
-          <MDBCol xs={12} lg={6}>
-            <input className='contact-input' type='text' placeholder='NAME' />
-          </MDBCol>
-          <MDBCol xs={12} lg={6}>
-          <input className='contact-input' type='email' placeholder='EMAIL' />
-          </MDBCol>
-        </MDBRow>
-        
-        <input className='contact-input' type='text' placeholder='SUBJECT' />
-        <textarea className='contact-input' style={{height: '75px'}} type='text' placeholder='MESSAGE' />
-        <button type='submit' style={{width: '100%', backgroundColor: '#fff', border: 'none', padding: '3px 0', fontFamily: 'Lato Semibold', transition: '0.2s'}} className='contact-submit'>Submit</button>
-      </form>
-    </div>
+    <>
+      <ToastContainer />
+      <div className='contact-form'>
+        <h2 className='contact-title'>Don't see your school?</h2>
+        <p className='contact-subtitle'>Send us a message to tell us about your organization and the Posters team will reach out!</p>
+        <hr className='divider' />
+        <form className='form' onSubmit={handleSubmit}>
+          <MDBRow>
+            <MDBCol xs={12} lg={6}>
+              <input className='contact-input' type='text' placeholder='NAME' />
+            </MDBCol>
+            <MDBCol xs={12} lg={6}>
+            <input className='contact-input' type='email' placeholder='EMAIL' />
+            </MDBCol>
+          </MDBRow>
+          
+          <input className='contact-input' type='text' placeholder='SUBJECT' />
+          <textarea className='contact-input' style={{height: '75px'}} type='text' placeholder='MESSAGE' />
+          <button type='submit' style={{width: '100%', backgroundColor: '#fff', border: 'none', padding: '3px 0', fontFamily: 'Lato Semibold', transition: '0.2s'}} className='contact-submit'>Submit</button>
+        </form>
+      </div>
+    </>
   )
 }
 export default ContactForm
