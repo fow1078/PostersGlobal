@@ -32,7 +32,7 @@ function AdminTable() {
   
   return (
     <>
-      <h1 className='caption'>Locations</h1>
+      <h1 className='caption' style={{color: '#fff'}}>Locations</h1>
       <table className="dcf-table dcf-table-responsive dcf-table-bordered dcf-table-striped dcf-w-100%">
       
         <thead>
