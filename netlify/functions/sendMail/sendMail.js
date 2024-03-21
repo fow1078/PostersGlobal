@@ -10,7 +10,7 @@ exports.handler = async (event, context) => {
     'apikey': API_KEY,
     'subject': 'subject',
     'from': SENDER_EMAIL,
-    'to': 'fow1078@gmail.com',
+    'to': 'contact@postersglobal.com',
     'bodyHtml': `
         <div style="text-align: center; padding: 10px; border-bottom: 1px solid #eee;">
             <h2>Support Request</h2>
