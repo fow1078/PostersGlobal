@@ -29,8 +29,7 @@ function ContactForm() {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark",
-      transition: Flip,
+      theme: "dark"
       });
   }
 
