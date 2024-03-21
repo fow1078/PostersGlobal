@@ -1,5 +1,5 @@
 import React from 'react'
-import { MDBCol, MDBContainer, MDBRow } from 'mdb-react-ui-kit'
+import { MDBCol, MDBRow } from 'mdb-react-ui-kit'
 import { sendEmail } from '../../common/sendEmail'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -21,7 +21,7 @@ function ContactForm() {
     e.target[2].value = ""
     e.target[3].value = ""
 
-    toast.success('🦄 Wow so easy!', {
+    toast.success('Request was sent! \n We will answer you soon!', {
       position: "top-center",
       autoClose: 1500,
       hideProgressBar: false,
@@ -30,7 +30,7 @@ function ContactForm() {
       draggable: true,
       progress: undefined,
       theme: "dark"
-      });
+    });
   }
 
   return (
