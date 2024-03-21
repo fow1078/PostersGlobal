@@ -43,15 +43,15 @@ function ContactForm() {
         <form className='form' onSubmit={handleSubmit} autoComplete='off'>
           <MDBRow>
             <MDBCol xs={12} lg={6}>
-              <input className='contact-input' type='text' placeholder='NAME' />
+              <input className='contact-input' autoComplete="off" type='text' placeholder='NAME' />
             </MDBCol>
             <MDBCol xs={12} lg={6}>
-            <input className='contact-input' type='email' placeholder='EMAIL' />
+            <input className='contact-input' autoComplete="off" type='email' placeholder='EMAIL' />
             </MDBCol>
           </MDBRow>
           
-          <input className='contact-input' type='text' placeholder='SUBJECT' />
-          <textarea className='contact-input' style={{height: '75px'}} type='text' placeholder='MESSAGE' />
+          <input className='contact-input' autoComplete="off" type='text' placeholder='SUBJECT' />
+          <textarea className='contact-input' autoComplete="off" style={{height: '75px'}} type='text' placeholder='MESSAGE' />
           <button type='submit' style={{width: '100%', backgroundColor: '#fff', border: 'none', padding: '3px 0', fontFamily: 'Lato Semibold', transition: '0.2s'}} className='contact-submit'>Submit</button>
         </form>
       </div>
