@@ -36,7 +36,7 @@ function EditForm({data, id}) {
 
     const updatedData = [...data]
     updatedData[id - 1].name = university
-    updatedData[id - 1].street = address,
+    updatedData[id - 1].address = address,
     updatedData[id - 1].latitude = coords[0],
     updatedData[id - 1].longitude = coords[1],
     updatedData[id - 1].users = users
