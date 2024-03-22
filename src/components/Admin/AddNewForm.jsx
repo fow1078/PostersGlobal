@@ -4,6 +4,7 @@ import { MDBInput, MDBRow, MDBCol, MDBBtn } from 'mdb-react-ui-kit';
 
 import database from '../../firebase_init';
 import { ref, set, onValue } from 'firebase/database';
+import { getCoords } from '../../common/getCoords';
 
 function AddNewForm({data}) {
   const dataRef = ref(database, '/');
@@ -13,20 +14,21 @@ function AddNewForm({data}) {
       .catch((error) => alert('Failed to update data: ' + error));
   };
   
-  const handleAdd = (e) => {
+  const handleAdd = async (e) => {
     e.preventDefault();
     const university = document.getElementById('university-name').value 
-    const street = document.getElementById('street').value 
-    const longitude = document.getElementById('longitude').value 
-    const latitude = document.getElementById('latitude').value 
+    const address = document.getElementById('address').value 
     const users = document.getElementById('users').value 
+    const coords = await getCoords(address)
+
+    
     const newLocation = {
       id: data.length + 1,
       name: university,
-      latitude: latitude,
-      longitude: longitude,
-      users: users,
-      street: street
+      latitude: coords[0],
+      longitude: coords[1],
+      address: address,
+      users: users
     }
     const updatedData = [...data, newLocation]
     updateData(updatedData)
@@ -44,20 +46,14 @@ function AddNewForm({data}) {
       <MDBCol xs={12} lg={6} style={{marginBottom: '15px'}}> 
         <MDBInput id='university-name' label='Name' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} />
       </MDBCol>
-      <MDBCol xs={12} lg={6}>
-        <MDBInput id='street' label='Street' type='text' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} />
+      <MDBCol xs={12} lg={6} style={{marginBottom: '15px'}}>
+        <MDBInput id='users' label='Number of users' style={{color: '#fff'}} type='email' labelStyle={{color: '#b3b3b3'}} />
       </MDBCol>
     </MDBRow>
 
     <MDBRow style={{marginBottom: '15px'}}>
-      <MDBCol xs={12} lg={4} style={{marginBottom: '15px'}}>
-        <MDBInput id='longitude' label='Longitude' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} />
-      </MDBCol>
-      <MDBCol xs={12} lg={4} style={{marginBottom: '15px'}}>
-        <MDBInput id='latitude' label='Latitude' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} />
-      </MDBCol>
-      <MDBCol xs={12} lg={4} style={{marginBottom: '15px'}}>
-        <MDBInput id='users' label='Number of users' style={{color: '#fff'}} type='email' labelStyle={{color: '#b3b3b3'}} />
+      <MDBCol xs={12} style={{marginBottom: '15px'}}>
+        <MDBInput id='address' label='Address' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} />
       </MDBCol>
     </MDBRow>
 

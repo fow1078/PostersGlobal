@@ -39,7 +39,7 @@ function MapA({ pins, refer, popupInfo, setPopupInfo }) {
             onClose={() => setPopupInfo(null)}
           >
             <div>
-              {popupInfo.name}, {popupInfo.users} users |{' '}
+              {popupInfo.name}, {popupInfo.address} <br/>{popupInfo.users} users |{' '}
               <a
                 target="_new"
                 href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.name}`}

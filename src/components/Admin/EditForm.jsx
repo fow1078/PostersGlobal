@@ -6,14 +6,14 @@ import database from '../../firebase_init';
 import { ref, set, onValue } from 'firebase/database';
 
 import { checkAuthentication } from '../../common/checkAuth';
-
+import { getCoords } from '../../common/getCoords';
 
 function EditForm({data, id}) {
   const [university, setUniversity] = useState('');
-  const [street, setStreet] = useState('');
   const [longitude, setLongitude] = useState('');
   const [latitude, setLatitude] = useState('');
   const [users, setUsers] = useState('');
+  const [address, setAddress] = useState('')
 
   const [item, setItem] = useState(null)
   const dataRef = ref(database, '/');
@@ -27,18 +27,18 @@ function EditForm({data, id}) {
   if (!isAuthenticated) {
     window.location.replace("/admin/login")
   }
-  const handleEdit = (e) => {
+  const handleEdit = async (e) => {
     e.preventDefault();
     const university = document.getElementById('university-name').value 
-    const street = document.getElementById('street').value 
-    const longitude = document.getElementById('longitude').value 
-    const latitude = document.getElementById('latitude').value 
+    const address = document.getElementById('address').value
     const users = document.getElementById('users').value 
+    const coords = await getCoords(address)
+
     const updatedData = [...data]
     updatedData[id - 1].name = university
-    updatedData[id - 1].street = street,
-    updatedData[id - 1].latitude = latitude,
-    updatedData[id - 1].longitude = longitude,
+    updatedData[id - 1].street = address,
+    updatedData[id - 1].latitude = coords[0],
+    updatedData[id - 1].longitude = coords[1],
     updatedData[id - 1].users = users
     updateData(updatedData)
     window.location.replace('/admin')
@@ -55,7 +55,7 @@ function EditForm({data, id}) {
       setLongitude(item.longitude)
       setLatitude(item.latitude)
       setUsers(item.users)
-      setStreet(item.street)
+      setAddress(item.address)
     }
   }, [item])
 
@@ -70,20 +70,14 @@ function EditForm({data, id}) {
       <MDBCol xs={12} lg={6} style={{marginBottom: '15px'}}> 
         <MDBInput id='university-name' label='Name' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} value={university} onChange={(e) => {setUniversity(e.target.value)}} />
       </MDBCol>
-      <MDBCol xs={12} lg={6}>
-        <MDBInput id='street' label='Street' type='text' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} value={street} onChange={(e) => {setStreet(e.target.value)}} />
+      <MDBCol xs={12} lg={6} style={{marginBottom: '15px'}}>
+        <MDBInput id='users' label='Number of users' style={{color: '#fff'}} type='text' labelStyle={{color: '#b3b3b3'}} value={users} onChange={(e) => {setUsers(e.target.value)}}  />
       </MDBCol>
     </MDBRow>
 
     <MDBRow style={{marginBottom: '15px'}}>
-      <MDBCol xs={12} lg={4} style={{marginBottom: '15px'}}>
-        <MDBInput id='longitude' label='Longitude' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} value={longitude} onChange={(e) => {setLongitude(e.target.value)}}  />
-      </MDBCol>
-      <MDBCol xs={12} lg={4} style={{marginBottom: '15px'}}>
-        <MDBInput id='latitude' label='Latitude' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} value={latitude} onChange={(e) => {setLatitude(e.target.value)}}  />
-      </MDBCol>
-      <MDBCol xs={12} lg={4} style={{marginBottom: '15px'}}>
-        <MDBInput id='users' label='Number of users' style={{color: '#fff'}} type='email' labelStyle={{color: '#b3b3b3'}} value={users} onChange={(e) => {setUsers(e.target.value)}}  />
+      <MDBCol xs={12} style={{marginBottom: '15px'}}>
+        <MDBInput id='address' label='Address' style={{color: '#fff'}} labelStyle={{color: '#b3b3b3'}} value={address} onChange={(e) => {setAddress(e.target.value)}}  />
       </MDBCol>
     </MDBRow>
 

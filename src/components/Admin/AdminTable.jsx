@@ -39,8 +39,7 @@ function AdminTable() {
           <tr>
             <th scope="col">ID</th>
             <th scope="col">University Name</th>
-            <th scope="col">Longitude</th>
-            <th scope="col">Latitude</th>
+            <th scope="col">Address</th>
             <th scope="col">Users</th>
             <th scope="col"></th>
             <th scope="col"></th>

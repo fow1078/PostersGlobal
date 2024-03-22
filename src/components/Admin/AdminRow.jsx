@@ -24,7 +24,8 @@ function AdminRow({row, data}) {
 				name: elem.name,
 				latitude: elem.latitude,
 				longitude: elem.longitude,
-				users: elem.users
+				users: elem.users,
+				address: elem.address
 			}
 		})
 		updateData(updatedData)
@@ -39,8 +40,7 @@ function AdminRow({row, data}) {
     <tr>
 			<th scope="row">{row.id}.</th>
 			<td data-label="University Name">{row.name}</td>
-			<td data-label="Longitude">{row.longitude}</td>
-			<td data-label="Latitude">{row.latitude}</td>
+			<td data-label="Address">{row.address}</td>
 			<td data-label="Users">{row.users}</td>
       <td className='edit-column'><button className='edit-btn' style={{backgroundColor: 'rgb(60 60 60)', color: "#fff", border: '1px solid #ffffff', borderRadius: '7px', padding: '10px 15px'}} onClick={(e) => {handleEdit(e, row.id)}}> <FontAwesomeIcon icon={faPenToSquare} /></button></td>
       <td className='remove-column'><button className='remove-btn' style={{backgroundColor: '#740a0a', color: "#fff", border: '1px solid #ffffff', borderRadius: '7px', padding: '10px 15px'}} onClick={(e) => {handleRemove(e, row.id)}}>X</button></td>
