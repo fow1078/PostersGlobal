@@ -9,8 +9,8 @@ function MainHeader() {
     window.location.href = "#contact-anchor"
   }
   return (
-    <div className="mainheader" style={{position: 'fixed', width: '100%', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px'}}>
-      <img src={StarLogo} style={{width: '40px', height: '40px', zIndex: 1000}} />
+    <div className="mainheader" style={{position: 'fixed', width: '100%', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px', zIndex: '100'}}>
+      <img src={StarLogo} style={{width: '40px', height: '40px'}} />
       <button onClick={handleContactClick} className='mainheader-btn' style={{width: '130px', height: '30px', backgroundColor: '#fff', borderRadius: '4px', border: 'none', textTransform: 'uppercase', display: 'flex', fontSize: '14px', justifyContent: 'space-evenly', alignItems: 'center'}}>Contact Us <FontAwesomeIcon icon={faArrowRight} style={{fontSize: '12px'}} /></button>
     </div>
   )
