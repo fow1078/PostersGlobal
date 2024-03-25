@@ -171,6 +171,19 @@
   margin-bottom: 10px;
 }
 
+.showmore {
+  position: absolute;
+  bottom: -38px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
 
 .privacy-policy {color: #999999; font-family: Lato Regular; margin: 0 15px;}
 .author {font-family: 'Courier New', Courier, monospace; color: #9a9a9a; font-family: Lato Regular;}

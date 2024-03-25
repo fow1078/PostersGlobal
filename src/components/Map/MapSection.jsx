@@ -43,7 +43,7 @@ function MapSection() {
   ))
   
   return (
-    <div className='map-section'>
+    <div className='map-section' id='map'>
       <div className='title-box' style={{width: '100%', display: 'flex', flexDirection: 'column', margin: '20px 0 40px 0', justifyItems: 'center', alignItems: 'center'}}>
         <h2 className='map-title'>Explore Our App Network</h2>
         <p className='map-subtitle'>Navigate our interactive map to discover universities where Posters is actively used, highlighted by pinpointed locations.</p>
