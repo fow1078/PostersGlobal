@@ -40,6 +40,8 @@ const privacyPolicyHtml = `
         <li><p class="privacy-policy-paragraph">Professional Advisors – such as lawyers and accountants.</p></li>
         <li><p class="privacy-policy-paragraph">Business Transaction Recipients – including counterparties and others assisting with a merger, acquisition, financing, reorganization, bankruptcy, receivership, dissolution, asset sale, or similar transaction involving our business.</p></li>
         <li><p class="privacy-policy-paragraph">Legal and Safety – government authorities or regulators or other third parties where required by law or legal process or to protect Posters, users’, or other third parties’ rights and safety.</p></li>
+        <li><p class="privacy-policy-paragraph">No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</p></li>
+        <li><p class="privacy-policy-paragraph">All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p></li>
       </ul>
     </div>
     <br>
