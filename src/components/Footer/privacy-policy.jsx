@@ -7,7 +7,7 @@ const privacyPolicyHtml = `
   </div>
 
   <h2 class="main-title">Privacy Policy</h2>
-  <p><i style="color: #bebebe">Last Updated March 20, 2023</i></p>
+  <p><i style="color: #bebebe">Last Updated August 13, 2024</i></p>
   <br>
   <div>
     <h4 class="privacy-subtitle">Data Collection and Use</h4>
