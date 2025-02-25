@@ -7,7 +7,7 @@ const termsHtml = `
     </div>
 
     <h2 class="main-title">Terms of Service</h2>
-    <p><i style="color: #bebebe; font-family: Lato-Regular">Last Updated March 20, 2023</i></p>
+    <p><i style="color: #bebebe; font-family: Lato-Regular">Last Updated February 23, 2025</i></p>
     <br>
     <p class="privacy-policy-paragraph">Welcome to Posters. Posters is a social network designed to help you connect with your college classmates</p>
     <br>
@@ -27,7 +27,7 @@ const termsHtml = `
       <br>
       <div>
         <h5 class="privacy-category-subtitle"><i>Accounts and Software Updates</i></h5>
-        <p class="privacy-policy-paragraph">When you create your Posters account, you agree that the information you submit is correct and complete. We may refuse you access to the Service if we learn that the information you provided is inaccurate. You may stop using the Services at any time and for any reason. You can delete your Posters account by tapping <b style="color: #ff0000">[Edit Profile › Manage Account › Delete Account]</b>.</p>
+        <p class="privacy-policy-paragraph">When you create your Posters account, you agree that the information you submit is correct and complete. We may refuse you access to the Service if we learn that the information you provided is inaccurate. You may stop using the Services at any time and for any reason. You can delete your Posters account by tapping <b style="color: #ff0000">Profile › Settings › Delete Account</b>.</p>
         <p class="privacy-policy-paragraph">Using Posters requires that we initially download software to your computer, phone, tablet, or other device. You agree that we may automatically update that software, and that these Terms and our policies will apply to any updates</p>
       </div>
       <br>
@@ -70,7 +70,7 @@ const termsHtml = `
         <h5 class="privacy-category-subtitle"><i>User Conduct</i></h5>
         <p class="privacy-policy-paragraph">You are solely responsible for all code, video, images, information, data, text, software, music, sound, photographs, graphics, messages, and other materials (“content”) that you make available to Company, including by uploading, posting, publishing, or displaying (hereinafter, “upload(ing)”) via the Service or by emailing or otherwise making available to other users of the Service). The following are examples of the kinds of content and/or uses that are illegal or prohibited by Company. Company reserves the right to investigate and take appropriate legal action against anyone who, in Company’s sole discretion, violates this provision, including removing the offending content from the Service, suspending or terminating the account of such violators, and reporting the violator to law enforcement authorities. You agree to not use the Service to:</p>
         <ol>
-          <li><p class="privacy-policy-paragraph">email or otherwise upload any content that (i) infringes any intellectual property or other proprietary rights of any party; (ii) you do not have a right to upload under any law or under contractual or fiduciary relationships; (iii) contains software viruses or any other computer code, files or programs designed to interrupt, destroy, or limit the functionality of any computer software or hardware or telecommunications equipment; (iv) poses or creates a privacy or security risk to any person; (v) constitutes unsolicited or unauthorized advertising, promotional materials, commercial activities and/or sales, “junk mail,” “spam,” “chain letters,” “pyramid schemes,” “contests,” “sweepstakes,” or any other form of solicitation; (vi) is unlawful, harmful, threatening, abusive, harassing, tortious, excessively violent, defamatory, vulgar, obscene, pornographic, libelous, invasive of another’s privacy, hateful, discriminatory, or otherwise objectionable; or (vii) in the sole judgment of Company, is objectionable or which restricts or inhibits any other person from using or enjoying the Service, or which may expose Company or its users to any harm or liability of any type;</p></li>
+          <li><p class="privacy-policy-paragraph">email or otherwise upload any content that (i) infringes any intellectual property or other proprietary rights of any party; (ii) you do not have a right to upload under any law or under contractual or fiduciary relationships; (iii) contains software viruses or any other computer code, files or programs designed to interrupt, destroy, or limit the functionality of any computer software or hardware or telecommunications equipment; (iv) poses or creates a privacy or security risk to any person; (v) constitutes unsolicited or unauthorized advertising, promotional materials, commercial activities and/or sales, "junk mail," "spam," "chain letters, " "pyramid schemes," "contests," "sweepstakes," or any other form of solicitation; (vi) is unlawful, harmful, threatening, abusive, harassing, tortious, excessively violent, defamatory, vulgar, obscene, pornographic, libelous, invasive of another's privacy, hateful, discriminatory, or otherwise objectionable. This includes, but is not limited to: Content that promotes hatred or violence against protected groups, deliberate intimidation or harassment of other users, explicit or graphic violence, sexually explicit or pornographic material, content that exploits or abuses minors or interferes with or disrupts the service or servers or networks connected to the service, or disobey any requirements, procedures, policies, or regulations of networks connected to the Service, extreme gore or graphic content; or (vii) in the sole judgment of Company, is objectionable or which restricts or inhibits any other person from using or enjoying the Service, or which may expose Company or its users to any harm or liability of any type;</p></li>
           <li><p class="privacy-policy-paragraph">interfere with or disrupt the Service or servers or networks connected to the Service, or disobey any requirements, procedures, policies, or regulations of networks connected to the Service;</p></li>
           <li><p class="privacy-policy-paragraph">violate any applicable local, state, national, or international law, or any regulations having the force of law; </p></li>
           <li><p class="privacy-policy-paragraph">impersonate any person or entity, or falsely state or otherwise misrepresent your affiliation with a person or entity;</p></li>
@@ -82,6 +82,28 @@ const termsHtml = `
           <li><p class="privacy-policy-paragraph">circumvent, remove, alter, deactivate, degrade, or thwart any of the content protections in or geographic restrictions on any content (including Service Content (as defined below)) available on or through the Service, including through the use of virtual private networks; or</p></li>
           <li><p class="privacy-policy-paragraph">engage in or use any data mining, robots, scraping, or similar data gathering or extraction methods. If you are blocked by Company from accessing the Service (including by blocking your IP address), you agree not to implement any measures to circumvent such blocking (e.g., by masking your IP address or using a proxy IP address or virtual private network).</p></li>
         </ol>
+      </div>
+      <br>
+      <div>
+        <h5 class="privacy-category-subtitle"><i>Content Moderation and Enforcement</i></h5>
+        <p class="privacy-policy-paragraph">Posters maintains and enforces a strict zero-tolerance policy regarding objectionable content and abusive users. We reserve the right to:</p>
+        <ol>
+          <li><p class="privacy-policy-paragraph">Remove any content that violates these Terms immediately and without notice</p></li>
+          <li><p class="privacy-policy-paragraph">Suspend or terminate accounts of users who post objectionable content or engage in abusive behavior</p></li>
+          <li><p class="privacy-policy-paragraph">Cooperate with law enforcement when required by law</p></li>
+          <li><p class="privacy-policy-paragraph">
+            Preserve and disclose account information and content when necessary to:
+            <ul>
+              <li><p class="privacy-policy-paragraph">Enforce these Terms</p></li>
+              <li><p class="privacy-policy-paragraph">Protect the safety of our users</p></li>
+              <li><p class="privacy-policy-paragraph">Respond to legal requests</p></li>
+              <li><p class="privacy-policy-paragraph">Prevent illegal activities</p></li>
+            </ul>
+          </p></li>
+        </ol>
+        <p class="privacy-policy-paragraph">Users who encounter objectionable content or abusive behavior should report it immediately through the app's reporting features. We investigate all reports promptly and take appropriate action to maintain the safety and integrity of our platform.</p>
+        <br>
+        <p class="privacy-policy-paragraph">Decisions regarding content removal and account termination are at Posters' sole discretion. We typically provide notice when taking such actions, but may act immediately and without notice in cases of serious violations.</p>
       </div>
       <br>
       <div>
@@ -138,7 +160,7 @@ const termsHtml = `
         <p class="privacy-policy-paragraph">Reply 'HELP' to any SMS received from us to obtain help on your mobile phone.</p>
         <p class="privacy-policy-paragraph">Email us at: <a href="mailto:contact@postersglobal.com" target="_blank">contact@postersglobal.com</a></p>
         <p class="privacy-policy-paragraph">Terminating SMS</p>
-        <p class="privacy-policy-paragraph">You may terminate any SMS messages from Posters at any time by texting STOP to <b style="color: #ff0000">[70423]</b>.</p>
+        <p class="privacy-policy-paragraph">You may terminate any SMS messages from Posters at any time by texting STOP to <b style="color: #ff0000">+1 (206) 796-9540</b>.</p>
       </div>
       <br>
       <div>
